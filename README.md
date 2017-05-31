@@ -12,7 +12,7 @@ No library required.
 You can run the script with `python3 Go_concatenator.py path/to/file/ path/output file_name` or just `python3 Go_concatenator.py` after editing paths in the script (somewhere at the end).
 
 ## Codingame
-I use this script mainly for [Codingame](codingames.com) challenges. This platform has an integrated IDE, to copy paste my code quickly I am using [xsel](https://linux.die.net/man/1/xsel) to copy the code to the clipbloard.
+I use this script mainly for [Codingame](codingame.com) challenges. This platform has an integrated IDE, to copy paste my code quickly I am using [xsel](https://linux.die.net/man/1/xsel) to copy the code to the clipbloard.
 
 Install xsel: `sudo apt-get install xsel`
 
