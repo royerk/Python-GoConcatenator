@@ -1,9 +1,10 @@
 # python 3
 import os  # to get files names from a directory
 import sys  # for python script arguments
+import datetime # date in file name for versioning
 
 def find_imports(file_name, path_files="./", verbose=True):
-    """Find imported lib from a .go file"""
+    """Find imported packages from a .go file"""
     result = []
     with open(path_files+file_name) as fp:              # open file
         read_in_next_line = False
@@ -104,9 +105,10 @@ if __name__ == '__main__':
         path_output = sys.argv[1]
         file_output = sys.argv[2]
     else:
-        path_to_files = "../CVS3/"
-        path_output = "../"
-        file_output = "cvs3_blob.go"
+        path_to_files = "/home/user/folder/"
+        path_output = "/home/user/folder/versions/"
+        d = datetime.datetime.now()
+        file_output = "blobName_"+d.strftime('%Y-%m-%d_%H-%M')+".go"
     print("//path_to_files:", path_to_files)
     print("//path_output:  ", path_output)
     print("//file_output:  ", file_output)
