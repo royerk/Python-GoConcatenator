@@ -105,10 +105,10 @@ if __name__ == '__main__':
         path_output = sys.argv[1]
         file_output = sys.argv[2]
     else:
-        path_to_files = "/home/user/folder/"
-        path_output = "/home/user/folder/versions/"
+        path_to_files = "/home/user/stuff/"
+        path_output = "/home/user/stuff/versions/"
         d = datetime.datetime.now()
-        file_output = "blobName_"+d.strftime('%Y-%m-%d_%H-%M')+".go"
+        file_output = "codeBlob_"+d.strftime('%Y-%m-%d_%H-%M')+".go"
     print("//path_to_files:", path_to_files)
     print("//path_output:  ", path_output)
     print("//file_output:  ", file_output)
@@ -119,7 +119,7 @@ if __name__ == '__main__':
     #print("//imports:", imports)
     file_main = file_with_main(files, path_files=path_to_files)
     #print("//main() in:", file_main)
-    all_lines = glue_in_one_list(files, imports=imports, file_main=file_main, path_files=path_to_files)
+    all_lines = glue_in_one_list(files, imports=imports, path_output=path_output, file_main=file_main, path_files=path_to_files)
     list_to_file(all_lines, file_output=file_output)
 
     [print(line) for line in all_lines]
